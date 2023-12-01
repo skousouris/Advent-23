@@ -4,7 +4,7 @@
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
 # Read the file
-with open("/Users/skousouris/adv2023/day1a.txt") as trebuchet:
+with open("day1a.txt") as trebuchet:
     content = trebuchet.read()
 
 #Perform replacement
@@ -19,22 +19,22 @@ content = content.replace("seven","s7n")
 content = content.replace("nine","n9e")
 
 #Write content with replaced strings
-with open("/Users/skousouris/adv2023/temp1.txt" , "w") as temp1:
+with open("temp1.txt" , "w") as temp1:
     temp1.write(content)
 
-with open("/Users/skousouris/adv2023/temp2.txt" , "w") as temp2:
+with open("temp2.txt" , "w") as temp2:
     temp2.write("")
 
-with open("/Users/skousouris/adv2023/temp1.txt","r") as trebuchet:
+with open("temp1.txt","r") as trebuchet:
     lines = trebuchet.readlines()
 
 #write only numbers
 for line in lines:
     a = ''.join(char for char in line if char.isdigit())
-    with open("/Users/skousouris/adv2023/temp2.txt", "a") as temp2:
+    with open("temp2.txt", "a") as temp2:
         temp2.write(a+"\n")
 
-with open("/Users/skousouris/adv2023/temp2.txt") as temp2:
+with open("temp2.txt") as temp2:
     lines = temp2.readlines()
 
 summ = sum(int(line[0])*10 + int(line[-2]) for line in lines)
