@@ -8,19 +8,19 @@ home_directory = os.path.expanduser("~")
 print("Home Directory:", home_directory)
 
 
-with open("/Users/skousouris/adv2023/day1a.txt") as trebuchet:
+with open("day1a.txt") as trebuchet:
     lines = trebuchet.readlines()
 
-with open("/Users/skousouris/adv2023/temp1.txt" , "w") as temp1:
+with open("temp1.txt" , "w") as temp1:
     temp1.write("")
 
 
 for line in lines[:]:
     a = ''.join(char for char in line if char.isdigit())
-    with open("/Users/skousouris/adv2023/temp1.txt", "a") as temp1:
+    with open("temp1.txt", "a") as temp1:
         temp1.write(a+"\n")
 
-with open("/Users/skousouris/adv2023/temp1.txt") as temp1:
+with open("temp1.txt") as temp1:
     lines = temp1.readlines()
 
 sum = 0
